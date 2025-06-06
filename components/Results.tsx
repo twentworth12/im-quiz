@@ -31,13 +31,21 @@ export default function Results({ result, leadData }: ResultsProps) {
           </p>
           
           {resultMessage.showSwagMessage && (
-            <div className="bg-green-50 border border-green-200 rounded-xl p-6 mb-8">
-              <h2 className="text-2xl font-semibold text-green-800 mb-2">
+            <div className="bg-[#FFF4F1] border border-[#F25533] rounded-xl p-6 mb-8">
+              <h2 className="text-2xl font-semibold text-[#F25533] mb-2">
                 🎁 Free swag unlocked!
               </h2>
-              <p className="text-green-700">
-                We'll be in touch via email with details about claiming your incident.io swag.
+              <p className="text-[#1a1a1a] mb-4">
+                Congratulations! You've earned free incident.io swag. Visit our swag store to claim your reward.
               </p>
+              <a
+                href="https://incident.io/swag"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#F25533] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#e04429] transition-colors"
+              >
+                Visit swag store
+              </a>
             </div>
           )}
         </div>
