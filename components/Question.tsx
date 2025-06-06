@@ -1,6 +1,6 @@
 "use client";
 
-import { Question } from '@/lib/questions';
+import type { Question } from '@/lib/questions';
 
 interface QuestionProps {
   question: Question;
