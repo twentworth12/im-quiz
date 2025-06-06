@@ -9,6 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // incident.io brand colors
+        'incident': {
+          'primary': '#F25533',
+          'primary-hover': '#E04429',
+          'dark': '#1a1a1a', 
+          'gray': '#666666',
+          'light-bg': '#f9fafb',
+          'border': '#e5e7eb',
+          'accent-bg': '#FFF4F1',
+        },
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         primary: {

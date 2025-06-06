@@ -64,19 +64,19 @@ export default function Quiz({ leadData }: QuizProps) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Calculating your results...</p>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#F25533] mx-auto mb-4"></div>
+          <p className="text-[#666666]">Calculating your results...</p>
         </div>
       </div>
     );
   }
   
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+    <div className="min-h-screen bg-[#f9fafb] py-12">
       <div className="max-w-3xl mx-auto px-4">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 text-center mb-8">
-            Incident Management Best Practices Quiz
+          <h1 className="text-3xl font-bold text-[#1a1a1a] text-center mb-8">
+            Incident management best practices quiz
           </h1>
           <ProgressBar current={currentQuestionIndex + 1} total={questions.length} />
         </div>

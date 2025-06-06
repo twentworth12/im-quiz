@@ -56,16 +56,16 @@ export default function LeadForm({ onSubmit }: LeadFormProps) {
   };
   
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
+    <form onSubmit={handleSubmit} className="space-y-6 bg-white p-8 rounded-xl shadow-lg max-w-2xl mx-auto">
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">Start the Incident Management Quiz</h2>
-        <p className="text-gray-600">Score 80% or higher to earn free incident.io SWAG!</p>
+        <h2 className="text-2xl font-bold text-[#1a1a1a] mb-2">Start the incident management quiz</h2>
+        <p className="text-[#666666]">Score 80% or higher to earn free incident.io swag!</p>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-1">
-            Full Name *
+          <label htmlFor="fullName" className="block text-sm font-medium text-[#1a1a1a] mb-1">
+            Full name *
           </label>
           <input
             type="text"
@@ -73,19 +73,19 @@ export default function LeadForm({ onSubmit }: LeadFormProps) {
             name="fullName"
             value={formData.fullName}
             onChange={handleChange}
-            className={`w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-              errors.fullName ? 'border-red-500' : 'border-gray-300'
+            className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#F25533] focus:border-transparent ${
+              errors.fullName ? 'border-[#F25533]' : 'border-[#e5e7eb]'
             }`}
             required
           />
           {errors.fullName && (
-            <p className="mt-1 text-sm text-red-600">{errors.fullName}</p>
+            <p className="mt-1 text-sm text-[#F25533]">{errors.fullName}</p>
           )}
         </div>
         
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-            Work Email *
+          <label htmlFor="email" className="block text-sm font-medium text-[#1a1a1a] mb-1">
+            Work email *
           </label>
           <input
             type="email"
@@ -93,19 +93,19 @@ export default function LeadForm({ onSubmit }: LeadFormProps) {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className={`w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-              errors.email ? 'border-red-500' : 'border-gray-300'
+            className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#F25533] focus:border-transparent ${
+              errors.email ? 'border-[#F25533]' : 'border-[#e5e7eb]'
             }`}
             required
           />
           {errors.email && (
-            <p className="mt-1 text-sm text-red-600">{errors.email}</p>
+            <p className="mt-1 text-sm text-[#F25533]">{errors.email}</p>
           )}
         </div>
         
         <div>
-          <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
-            Company Name *
+          <label htmlFor="company" className="block text-sm font-medium text-[#1a1a1a] mb-1">
+            Company name *
           </label>
           <input
             type="text"
@@ -113,27 +113,27 @@ export default function LeadForm({ onSubmit }: LeadFormProps) {
             name="company"
             value={formData.company}
             onChange={handleChange}
-            className={`w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-              errors.company ? 'border-red-500' : 'border-gray-300'
+            className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#F25533] focus:border-transparent ${
+              errors.company ? 'border-[#F25533]' : 'border-[#e5e7eb]'
             }`}
             required
           />
           {errors.company && (
-            <p className="mt-1 text-sm text-red-600">{errors.company}</p>
+            <p className="mt-1 text-sm text-[#F25533]">{errors.company}</p>
           )}
         </div>
         
         <div>
-          <label htmlFor="companySize" className="block text-sm font-medium text-gray-700 mb-1">
-            Company Size *
+          <label htmlFor="companySize" className="block text-sm font-medium text-[#1a1a1a] mb-1">
+            Company size *
           </label>
           <select
             id="companySize"
             name="companySize"
             value={formData.companySize}
             onChange={handleChange}
-            className={`w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-              errors.companySize ? 'border-red-500' : 'border-gray-300'
+            className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#F25533] focus:border-transparent ${
+              errors.companySize ? 'border-[#F25533]' : 'border-[#e5e7eb]'
             }`}
             required
           >
@@ -143,13 +143,13 @@ export default function LeadForm({ onSubmit }: LeadFormProps) {
             ))}
           </select>
           {errors.companySize && (
-            <p className="mt-1 text-sm text-red-600">{errors.companySize}</p>
+            <p className="mt-1 text-sm text-[#F25533]">{errors.companySize}</p>
           )}
         </div>
         
         <div>
-          <label htmlFor="role" className="block text-sm font-medium text-gray-700 mb-1">
-            Role/Title *
+          <label htmlFor="role" className="block text-sm font-medium text-[#1a1a1a] mb-1">
+            Role/title *
           </label>
           <input
             type="text"
@@ -157,19 +157,19 @@ export default function LeadForm({ onSubmit }: LeadFormProps) {
             name="role"
             value={formData.role}
             onChange={handleChange}
-            className={`w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-              errors.role ? 'border-red-500' : 'border-gray-300'
+            className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#F25533] focus:border-transparent ${
+              errors.role ? 'border-[#F25533]' : 'border-[#e5e7eb]'
             }`}
             required
           />
           {errors.role && (
-            <p className="mt-1 text-sm text-red-600">{errors.role}</p>
+            <p className="mt-1 text-sm text-[#F25533]">{errors.role}</p>
           )}
         </div>
         
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-            Phone Number (Optional)
+          <label htmlFor="phone" className="block text-sm font-medium text-[#1a1a1a] mb-1">
+            Phone number (optional)
           </label>
           <input
             type="tel"
@@ -177,25 +177,25 @@ export default function LeadForm({ onSubmit }: LeadFormProps) {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className={`w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-              errors.phone ? 'border-red-500' : 'border-gray-300'
+            className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#F25533] focus:border-transparent ${
+              errors.phone ? 'border-[#F25533]' : 'border-[#e5e7eb]'
             }`}
           />
           {errors.phone && (
-            <p className="mt-1 text-sm text-red-600">{errors.phone}</p>
+            <p className="mt-1 text-sm text-[#F25533]">{errors.phone}</p>
           )}
         </div>
         
         <div className="md:col-span-2">
-          <label htmlFor="source" className="block text-sm font-medium text-gray-700 mb-1">
-            How did you hear about us? (Optional)
+          <label htmlFor="source" className="block text-sm font-medium text-[#1a1a1a] mb-1">
+            How did you hear about us? (optional)
           </label>
           <select
             id="source"
             name="source"
             value={formData.source}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-2 border border-[#e5e7eb] rounded-lg focus:ring-2 focus:ring-[#F25533] focus:border-transparent"
           >
             <option value="">Select an option</option>
             {leadSources.map(source => (
@@ -209,13 +209,13 @@ export default function LeadForm({ onSubmit }: LeadFormProps) {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="w-full bg-[#F25533] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#E04429] focus:outline-none focus:ring-2 focus:ring-[#F25533] focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
-          {isSubmitting ? 'Starting Quiz...' : 'Start Quiz'}
+          {isSubmitting ? 'Starting quiz...' : 'Start quiz'}
         </button>
       </div>
       
-      <p className="text-xs text-gray-500 text-center">
+      <p className="text-xs text-[#666666] text-center">
         By submitting this form, you agree to receive communications from incident.io.
       </p>
     </form>

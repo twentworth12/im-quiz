@@ -12,38 +12,38 @@ export default function Results({ result, leadData }: ResultsProps) {
   const resultMessage = getResultMessage(result);
   
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+    <div className="min-h-screen bg-[#f9fafb] py-12">
       <div className="max-w-4xl mx-auto px-4">
-        <div className="bg-white rounded-lg shadow-lg p-8 text-center mb-8">
-          <h1 className="text-4xl font-bold mb-4">{resultMessage.title}</h1>
+        <div className="bg-white rounded-xl shadow-lg p-8 text-center mb-8">
+          <h1 className="text-4xl font-bold mb-4 text-[#1a1a1a]">{resultMessage.title}</h1>
           
           <div className="mb-6">
-            <div className="text-6xl font-bold text-blue-600 mb-2">
+            <div className="text-6xl font-bold text-[#F25533] mb-2">
               {result.percentage}%
             </div>
-            <p className="text-gray-600">
+            <p className="text-[#666666]">
               {result.correctAnswers} out of {result.totalQuestions} questions correct
             </p>
           </div>
           
-          <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-[#1a1a1a] mb-8 max-w-2xl mx-auto">
             {resultMessage.message}
           </p>
           
           {resultMessage.showSwagMessage && (
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-8">
+            <div className="bg-green-50 border border-green-200 rounded-xl p-6 mb-8">
               <h2 className="text-2xl font-semibold text-green-800 mb-2">
-                🎁 Free SWAG Unlocked!
+                🎁 Free swag unlocked!
               </h2>
               <p className="text-green-700">
-                We'll be in touch via email with details about claiming your incident.io SWAG.
+                We'll be in touch via email with details about claiming your incident.io swag.
               </p>
             </div>
           )}
         </div>
         
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl font-bold mb-6">Review Your Answers</h2>
+        <div className="bg-white rounded-xl shadow-lg p-8">
+          <h2 className="text-2xl font-bold mb-6 text-[#1a1a1a]">Review your answers</h2>
           
           <div className="space-y-6">
             {questions.map((question, index) => {
@@ -60,7 +60,7 @@ export default function Results({ result, leadData }: ResultsProps) {
                     </div>
                     
                     <div className="flex-grow">
-                      <h3 className="font-semibold text-gray-900 mb-2">
+                      <h3 className="font-semibold text-[#1a1a1a] mb-2">
                         {index + 1}. {question.question}
                       </h3>
                       
@@ -77,7 +77,7 @@ export default function Results({ result, leadData }: ResultsProps) {
                                   ? 'bg-green-50 border border-green-300'
                                   : isUserAnswer && !isCorrect
                                   ? 'bg-red-50 border border-red-300'
-                                  : 'bg-gray-50'
+                                  : 'bg-[#f9fafb]'
                               }`}
                             >
                               <span className="flex items-center gap-2">
@@ -94,8 +94,8 @@ export default function Results({ result, leadData }: ResultsProps) {
                         })}
                       </div>
                       
-                      <div className="bg-blue-50 p-4 rounded-md">
-                        <p className="text-sm text-blue-800">
+                      <div className="bg-[#FFF4F1] p-4 rounded-lg">
+                        <p className="text-sm text-[#1a1a1a]">
                           <strong>Explanation:</strong> {question.explanation}
                         </p>
                       </div>
@@ -110,9 +110,9 @@ export default function Results({ result, leadData }: ResultsProps) {
         <div className="mt-8 text-center">
           <a
             href="/"
-            className="inline-block bg-blue-600 text-white font-semibold py-3 px-8 rounded-md hover:bg-blue-700 transition-colors"
+            className="inline-block bg-[#F25533] text-white font-semibold py-3 px-8 rounded-lg hover:bg-[#E04429] transition-colors"
           >
-            Take Quiz Again
+            Take quiz again
           </a>
         </div>
       </div>

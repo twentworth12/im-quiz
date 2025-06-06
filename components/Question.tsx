@@ -22,8 +22,8 @@ export default function Question({
   isLast
 }: QuestionProps) {
   return (
-    <div className="bg-white p-8 rounded-lg shadow-lg">
-      <h2 className="text-xl font-semibold text-gray-900 mb-6">
+    <div className="bg-white p-8 rounded-xl shadow-lg">
+      <h2 className="text-xl font-semibold text-[#1a1a1a] mb-6">
         {question.question}
       </h2>
       
@@ -31,7 +31,7 @@ export default function Question({
         {question.options.map((option, index) => (
           <label
             key={index}
-            className="flex items-center p-4 border rounded-lg cursor-pointer hover:bg-gray-50 transition-colors"
+            className="flex items-center p-4 border border-[#e5e7eb] rounded-lg cursor-pointer hover:bg-[#f9fafb] transition-colors"
           >
             <input
               type="radio"
@@ -39,9 +39,9 @@ export default function Question({
               value={index}
               checked={selectedAnswer === index}
               onChange={() => onAnswer(index)}
-              className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+              className="w-4 h-4 text-[#F25533] border-[#e5e7eb] focus:ring-[#F25533]"
             />
-            <span className="ml-3 text-gray-700">{option}</span>
+            <span className="ml-3 text-[#1a1a1a]">{option}</span>
           </label>
         ))}
       </div>
@@ -50,7 +50,7 @@ export default function Question({
         <button
           onClick={onPrevious}
           disabled={isFirst}
-          className="px-6 py-2 text-gray-600 bg-gray-200 rounded-md hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="px-6 py-2 text-[#666666] bg-[#f9fafb] border border-[#e5e7eb] rounded-lg hover:bg-[#e5e7eb] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
           Previous
         </button>
@@ -58,9 +58,9 @@ export default function Question({
         <button
           onClick={onNext}
           disabled={selectedAnswer === undefined}
-          className="px-6 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="px-6 py-2 text-white bg-[#F25533] rounded-lg hover:bg-[#E04429] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
-          {isLast ? 'Finish Quiz' : 'Next'}
+          {isLast ? 'Finish quiz' : 'Next'}
         </button>
       </div>
     </div>

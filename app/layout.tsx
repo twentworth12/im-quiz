@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'IM Quiz',
-  description: 'Interactive quiz application',
+  title: 'Incident management quiz - incident.io',
+  description: 'Test your incident management knowledge and earn free swag',
 }
 
 export default function RootLayout({
