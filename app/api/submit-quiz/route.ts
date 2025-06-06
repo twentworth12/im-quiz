@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { questions } from '@/lib/questions';
 import { calculateScore } from '@/lib/scoring';
-
-const results = new Map();
+import { storeResult } from '@/lib/results-store';
 
 export async function POST(request: NextRequest) {
   try {
@@ -12,7 +11,7 @@ export async function POST(request: NextRequest) {
     
     const resultId = Date.now().toString();
     
-    results.set(resultId, {
+    storeResult(resultId, {
       leadData,
       result,
       timestamp,
@@ -43,5 +42,3 @@ export async function POST(request: NextRequest) {
     );
   }
 }
-
-export { results };

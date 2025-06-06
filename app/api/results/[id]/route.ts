@@ -1,12 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { results } from '../../submit-quiz/route';
+import { getResult } from '@/lib/results-store';
 
 export async function GET(
   request: NextRequest,
   { params }: { params: { id: string } }
 ) {
   try {
-    const result = results.get(params.id);
+    const result = getResult(params.id);
     
     if (!result) {
       return NextResponse.json(
